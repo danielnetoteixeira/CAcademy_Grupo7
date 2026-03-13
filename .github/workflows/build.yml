@@ -1,4 +1,4 @@
-name: Hello world
+name: Build
 on: workflow_dispatch
 
 jobs:
