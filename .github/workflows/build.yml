@@ -1,0 +1,23 @@
+name: Build
+on: workflow_dispatch
+
+jobs:
+    # the name of the job
+    hello-world-job:
+      # The type of runner that the job will run on
+      runs-on: ubuntu-latest
+      # Sequence of tasks that will be executed as part of the job
+      steps:
+        # Checks-out the repository
+        - uses: actions/checkout@v3
+        # CodeQL
+        - name: Initialize CodeQL
+          uses: github/codeql-action/init@v4  
+          with:
+            languages: java
+        - name: Build for CodeQL Analysis
+          run: mvn clean compile
+        - name: Unit Tests
+          run: mvn test
+        - name: Initialize CodeQL
+          uses: github/codeql-action/analyze@v4
