@@ -68,9 +68,6 @@ jobs:
           name: Generate artifact with Trivy result
           path: trivy-results.sarif
 
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        
   docker-publish:
     needs: security-scan
     runs-on: ubuntu-latest
