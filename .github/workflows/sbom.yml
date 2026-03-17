@@ -1,4 +1,4 @@
-name: Hello world
+name: sbom
 on: workflow_dispatch
 
 jobs:
