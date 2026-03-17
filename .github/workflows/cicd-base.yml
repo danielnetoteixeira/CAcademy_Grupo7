@@ -81,6 +81,8 @@ jobs:
       packages: write
 
     steps:
+      - name: Code checkout
+        uses: actions/checkout@v4
       # Login in a Docker registry
       # https://github.com/docker/login-action
       - name: Log into registry ${{ env.REGISTRY }}
