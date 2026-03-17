@@ -8,6 +8,9 @@ env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
+permissions: 
+  id-token: write
+
 jobs:
   security-scan:
     runs-on: ubuntu-latest
