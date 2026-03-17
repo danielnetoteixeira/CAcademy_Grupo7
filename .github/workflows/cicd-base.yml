@@ -119,6 +119,7 @@ jobs:
         uses: aquasecurity/trivy-action@0.33.1
         with:
           image-ref: ${{ steps.meta.outputs.tags }}
+          exit-code: '0'
           format: 'sarif'
           output: 'trivy-image-results.sarif'
 
