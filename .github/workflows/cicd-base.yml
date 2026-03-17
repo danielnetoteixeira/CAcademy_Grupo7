@@ -119,6 +119,8 @@ jobs:
         uses: aquasecurity/trivy-action@0.33.1
         with:
           image-ref: ${{ steps.meta.outputs.tags }}
+          severity: 'CRITICAL'
+          exit-code: '1'
           format: 'sarif'
           output: 'trivy-image-results.sarif'
 
